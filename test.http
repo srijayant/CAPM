@@ -1,0 +1,16 @@
+# Get Books
+GET http://localhost:4004/odata/v4/catalog/Books?
+    # &$select=title,stock
+    # &$expand=currency
+    # &sap-Language=en
+###
+#
+#Read Authors table
+GET http://localhost:4004/odata/v4/catalog/Authors(306)
+###
+#
+#Update Author Table
+POST http://localhost:4004/odata/v4/catalog/Authors
+Content-Type: application/json
+
+{"ID": 306, "name": "Changed Author Name" }
